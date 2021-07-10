@@ -29,6 +29,17 @@ public class NewServlet extends HttpServlet {
      * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+//        EntityManager em = DBUtil.createEntityManager();
+//        Task t = new Task();
+//        t.setContent("課題提出");
+//        Timestamp currentTime = new Timestamp(System.currentTimeMillis());
+//        t.setCreated_at(currentTime);
+//        t.setUpdated_at(currentTime);
+//        em.getTransaction().begin();
+//        em.persist(t);
+//        em.getTransaction().commit();
+
         request.setAttribute("_token", request.getSession().getId());
         request.setAttribute("task", new Task());
 
