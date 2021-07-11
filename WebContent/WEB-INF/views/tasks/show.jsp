@@ -22,7 +22,7 @@
                             <th>更新日時：</th>
                             <c:choose>
                                 <c:when test="${task.created_at != task.updated_at}">
-                                    <td><fmt:formatDate value="${task.created_at}" pattern="yyyy-MM-dd HH:mm" /></td>
+                                    <td><fmt:formatDate value="${task.updated_at}" pattern="yyyy-MM-dd HH:mm" /></td>
                                 </c:when>
                             </c:choose>
                         </tr>
